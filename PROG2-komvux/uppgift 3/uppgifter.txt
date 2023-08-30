@@ -1,0 +1,13 @@
+Uppgift 4.1
+Skriv en funktion som skriver ut alla sökvägar i systemvariabeln PATH.
+använd .split()-metoden för strängar för att dela upp innehållet i PATH-
+variabeln. Windows separerar sökvägar med semikolon.
+
+Uppgift 4.2
+Hur kan man kontrollera om en miljövariabel existerar i uppslagslistan
+os.environ?
+
+Uppgift 4.3
+Skriv en funktion som returnerar en lista med alla filer i aktuell katalog.
+Skriv ett huvudprogram som använder funktionen för att lista alla filer i 
+aktuell katalog.
