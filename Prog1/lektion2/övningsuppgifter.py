@@ -39,8 +39,8 @@ print("Det högsta inmatade heltalet är: ", max(a, b, c, d, e))
 
 """
 #uppgift 2.6
-print(". : KORVKOLLEN : .")
-print("____________________")
+print(" . : KORVKOLLEN : .  ")
+print("_____________________")
 
 vanligKorv2 = int(input("Hur många elever vill ha 2 vanliga korvar? "))
 vanligKorv3 = int(input("Hur många elever vill ha 3 vanliga korvar? "))
@@ -50,9 +50,9 @@ vanligKorv = vanligKorv2 * 2 + vanligKorv3 * 3
 vegoKorv = vegoKorv2 * 2 + vegoKorv3 * 3
 elever = vanligKorv2 + vanligKorv3 + vegoKorv2 + vegoKorv3
 
-print("____________________")
-print(". : INKÖPSLISTA : .")
-print("____________________")
+print("_____________________")
+print(" . : INKÖPSLISTA : . ")
+print("_____________________")
 
 korvPaket = vanligKorv / 8
 vegoKorvPaket = vegoKorv / 4
@@ -60,9 +60,9 @@ prisVanligKorv = math.ceil(korvPaket) * 20.95
 prisVegoKorv = math.ceil(vegoKorvPaket) * 34.95
 prisDricka = elever * 13.95
 
-print("| Vanlig korv: ", math.ceil(korvPaket), " förpackningar")
+print("| Vanlig korv:  ", math.ceil(korvPaket), " förpackningar")
 print("| Vegansk korv: ", math.ceil(vegoKorvPaket), " förpackningar")
-print("| Dricka:     ", elever, " drickor")
+print("| Dricka:       ", elever, " drickor")
 print("____________________")
 print(prisVanligKorv + prisVegoKorv + prisDricka, " SEK")
 print("____________________")
