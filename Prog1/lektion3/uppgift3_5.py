@@ -55,9 +55,9 @@ celebs = [
     }
 ]
 
-gender = input("Ange kön: ")
-hair = input("Ange hårfärg: ")
-eyes = input("Ange ögonfärg: ")
+gender = input("Ange kön: ").lower()
+hair = input("Ange hårfärg: ").lower()
+eyes = input("Ange ögonfärg: ").lower()
 
 result = None
 resultat = []
