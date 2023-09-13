@@ -1,9 +1,7 @@
-import os
-notes = {
-    "Meddelande från skolan": "Friluftsdag på tisdag",
-    "Kom ihåg!": "Ta bilen till verkstad",
-    "Inför tentamen": "Gör alla instuderingsuppgifter"
-}
+import os, json
+
+with open('notes.json') as f:
+    notes = json.loads(f.read())
 
 while True:
     if os.name == "nt": # Rensa terminal
@@ -15,9 +13,8 @@ while True:
 -- GOLD EDITION --
 ------------------''')
     for key in notes:
-        print("Titel:", key)
-        print("-----------------")
-    print('''
+        print("-", key)
+    print('''-----------------
 view | view note
 add  | add/change note
 rm   | remove note
@@ -39,6 +36,8 @@ exit | exit program
             rm_data = input("Titel: ")
             del notes[rm_data]
         elif cmd == "exit":
+            with open('notes.json', 'w') as file:
+                file.write(json.dumps(notes))
             break
         else:
             print("FEL! Ogiltigt kommando")
