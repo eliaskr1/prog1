@@ -1,0 +1,19 @@
+h1{
+    color:blue;
+    font-size: 3em;
+    text-align: center; 
+}
+p{
+    background-color: white;
+    padding: 5px;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+}
+a{
+    text-decoration: none;
+
+}
+a:hover{
+    text-decoration: underline;
+}

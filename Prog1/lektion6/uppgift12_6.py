@@ -23,21 +23,26 @@ add  | add/change note
 rm   | remove note
 exit | exit program
 -------------------''')
-    cmd = input("menu > ")
-    if cmd == "add":
-        print("Lägg till artikel: ")
-        in_data = input("Titel: ")
-        in_data2 = input("Text: ")
-        notes[in_data] = in_data2
-    elif cmd == "view":
-        titel = input("Titel > ")
-        print(notes[titel])
-        input("Tryck retur för att köra igen...")
-    elif cmd == "rm":
-        print("Ta bort artikel: ")
-        rm_data = input("Titel: ")
-        del notes[rm_data]
-    elif cmd == "exit":
-        break
-    else:
-        print("FEL! Ogiltigt kommando")
+    try:
+        cmd = input("menu > ").lower()
+        if cmd == "add":
+            print("Lägg till artikel: ")
+            in_data = input("Titel: ")
+            in_data2 = input("Text: ")
+            notes[in_data] = in_data2
+        elif cmd == "view":
+            titel = input("Titel > ")
+            print(notes[titel])
+            input("Tryck retur för att köra igen...")
+        elif cmd == "rm":
+            print("Ta bort artikel: ")
+            rm_data = input("Titel: ")
+            del notes[rm_data]
+        elif cmd == "exit":
+            break
+        else:
+            print("FEL! Ogiltigt kommando")
+            input("Tryck på retur för att försöka igen...")
+    except KeyError:
+        print("FEL! Ogiltig key. Keys finns i listan med anteckningar.")
+        input("Tryck på retur för att försöka igen...")
