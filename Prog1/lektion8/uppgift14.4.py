@@ -75,22 +75,21 @@ def print_table(list):
     table_width = 52
     column1 = 13
     table_num = 1
-    loop = 0
     print("-"*table_width)
     print("| # | Nation        | W | D | L | GF | GA | GD | P |")
     print("-"*table_width)
     for i in list:
-        nation = sorted_l[loop]['nations']
-        wins = sorted_l[loop]['wins']
-        draws = sorted_l[loop]['draws']
-        losses = sorted_l[loop]['losses']
-        gf = sorted_l[loop]['goals for']
-        ga = sorted_l[loop]['goals against']
-        gd = sorted_l[loop]['goals for'] - sorted_l[loop]['goals against']
-        p = sorted_l[loop]['points']
+        nation = i['nations']
+        wins = i['wins']
+        draws = i['draws']
+        losses = i['losses']
+        gf = i['goals for']
+        ga = i['goals against']
+        gd = i['goals for'] - i['goals against']
+        p = i['points']
         print(f"| {table_num} | {nation.ljust(column1)} | {wins} | {draws} | {losses} | {gf : > 2} | {ga : > 2} | {gd : > 2} | {p} |")
         table_num += 1
-        loop += 1
+    print("-"*table_width)
 
 add_game('Costa Rica', 0, 'Serbia', 1)
 add_game('Brazil', 1, 'Switzerland', 1)
